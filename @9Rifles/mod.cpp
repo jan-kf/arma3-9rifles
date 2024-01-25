@@ -1,0 +1,11 @@
+name = "9 Rifles"; // The name of your mod
+picture = "longRifles.paa"; // Path to the mod icon
+logo = "rifles.paa"; // Small icon displayed in the main menu
+logoSmall = "rifles.paa";
+logoOver = "rifles.paa"; // Mouse over icon in the main menu
+tooltip = "9 Rifles Custom Mod"; // Tooltip text when mouse is over the icon
+tooltipOwned = "9 Rifles Mod is Active!"; // Tooltip text when mouse is over the icon and the mod is owned by the player
+action = "https://steamcommunity.com/app/107410/discussions/10/4030222834118173424/"; // URL to mod website or action when clicked
+actionName = "Website"; // Text displayed in the main menu as the action
+overview = "A small collection of items for use in the 9 Rifles Unit"; // A brief overview or description of your mod
+author = "Yoshi"; // Author name

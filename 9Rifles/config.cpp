@@ -37,7 +37,7 @@ class cfgFactionClasses
 //     {
 //         displayName = "My Custom Patch"; // Name displayed in Arsenal
 //         author = "Astartes"; // Author displayed in Arsenal
-//         texture = "\arma3-9rifles\UI\custom_patch_co.paa"; // Image path
+//         texture = "9Rifles\UI\custom_patch_co.paa"; // Image path
 //         textureVehicle = ""; // Does nothing currently, reserved for future use
 //     };
 // }; 
@@ -53,30 +53,30 @@ class CfgVehicles
     //************************************************************************************************************************************************************************************************
     //*****             Units                *********************************************************************************************************************************************************
     //************************************************************************************************************************************************************************************************
-    class B_Soldier_F; 
+    // class B_Soldier_F; 
     
-    class UK_9Rifles_Rifleman: B_soldier_F {
-        author = "Astartes"; 
-        _generalMacro = "B_soldier_F"; 
-        scope = 2; 
-        displayName = "Custom Soldier"; 
-        identityTypes[] = {"Head_NATO", "G_NATO_default"}; 
-        genericNames = "NATOMen"; 
-        faction = "UK_9Rifles";
-        model = "\A3\characters_f\BLUFOR\b_soldier_01.p3d"; //Default NATO 
-        uniformClass = "Custom_Camo"; 
-        hiddenSelections[] = {"Camo","Insignia"}; 
-        hiddenSelectionsTextures[] = {"arma3-9rifles\Data\uk_nato.paa"};
-        // hiddenSelectionsMaterials[] = {"arma3-9rifles\Data\custom_camo.rvmat"};  
-         weapons[] = {"arifle_TRG20_ACO_Flash_F","Throw","Put"}; 
-        respawnWeapons[] = {"arifle_TRG20_ACO_Flash_F","Throw","Put"}; 
-        magazines[] = {"HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"}; 
-        respawnMagazines[] = {"HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
-        linkedItems[] = {"Custom_Vest1", "ItemMap","ItemCompass","ItemWatch","ItemRadio"}; 
-        respawnLinkedItems[] = {"Custom_Vest1","ItemMap","ItemCompass","ItemWatch","ItemRadio"}; 
-    };
+    // class UK_9Rifles_Rifleman: B_soldier_F {
+    //     author = "Astartes"; 
+    //     _generalMacro = "B_soldier_F"; 
+    //     scope = 2; 
+    //     displayName = "Custom Soldier"; 
+    //     identityTypes[] = {"Head_NATO", "G_NATO_default"}; 
+    //     genericNames = "NATOMen"; 
+    //     faction = "UK_9Rifles";
+    //     model = "\A3\characters_f\BLUFOR\b_soldier_01.p3d"; //Default NATO 
+    //     uniformClass = "Custom_Camo"; 
+    //     hiddenSelections[] = {"Camo","Insignia"}; 
+    //     hiddenSelectionsTextures[] = {"9Rifles\Data\uk_nato.paa"};
+    //     // hiddenSelectionsMaterials[] = {"9Rifles\Data\custom_camo.rvmat"};  
+    //      weapons[] = {"arifle_TRG20_ACO_Flash_F","Throw","Put"}; 
+    //     respawnWeapons[] = {"arifle_TRG20_ACO_Flash_F","Throw","Put"}; 
+    //     magazines[] = {"HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"}; 
+    //     respawnMagazines[] = {"HandGrenade","HandGrenade","SmokeShell","SmokeShellGreen","Chemlight_green","Chemlight_green"};
+    //     linkedItems[] = {"Custom_Vest1", "ItemMap","ItemCompass","ItemWatch","ItemRadio"}; 
+    //     respawnLinkedItems[] = {"Custom_Vest1","ItemMap","ItemCompass","ItemWatch","ItemRadio"}; 
+    // };
 
-    class LandVehicle;
+    // class LandVehicle;
 
     class B_Heli_Light_01_F;
 
@@ -88,7 +88,7 @@ class CfgVehicles
         faction = "UK_9Rifles";
         displayName = "Barrison Prime MH-6 Hummingbird";
         hiddenSelections[] = {"Camo1"};
-        hiddenSelectionsTextures[] = {"arma3-9rifles\Data\barrisonprime_heli_mh6.paa"};
+        hiddenSelectionsTextures[] = {"9Rifles\Data\barrisonprime_heli_mh6.paa"};
     };
 
     // **********      FLAGS        ************
@@ -143,14 +143,14 @@ class CfgVehicles
 			verticalOffsetWorld=0;
 			init="''";
 		};
-		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\Flag_UK_F.jpg"; //TODO
+		editorPreview="9Rifles\Data\Flags\Flag_9rifles_F.jpg";
 		_generalMacro="Flag_UK_9Rifles_F";
 		scope=2;
 		scopeCurator=2;
 		displayName = "Flag (UK 9 Rifles)";
 		class EventHandlers
 		{
-			init="(_this select 0) setFlagTexture '\A3\Data_F\Flags\Flag_uk_CO.paa'";//TODO
+			init="(_this select 0) setFlagTexture '9Rifles\Data\Flags\flag_9rifles_co.paa'";
 		};
     };
 
@@ -205,14 +205,14 @@ class CfgVehicles
 			verticalOffsetWorld=0;
 			init="''";
 		};
-		editorPreview="\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Banner_01_FIA_F.jpg"; // TODO
+		editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
 		_generalMacro="Banner_01_9Rifles_F";
 		scope=2;
 		scopeCurator=2;
 		displayName="Banner (UK 9 Rifles)";
 		hiddenSelectionsTextures[]=
 		{
-			"a3\Data_f\Flags\flag_fia_CO.paa" // TODO
+			"9Rifles\Data\Flags\flag_9rifles_co.paa"
 		};
 	};
 };
@@ -222,80 +222,80 @@ class cfgWeapons
     //********************************************************************************************************************************************************************************************
     //*****            Uniforms              *****************************************************************************************************************************************************
     //********************************************************************************************************************************************************************************************
-    class ItemCore; 
-    class UniformItem; 
-    class Uniform_Base: ItemCore 
-    { 
-        class ItemInfo; 
-    }; 
+    // class ItemCore; 
+    // class UniformItem; 
+    // class Uniform_Base: ItemCore 
+    // { 
+    //     class ItemInfo; 
+    // }; 
 
-    class Custom_Camo: Uniform_Base 
-    { 
-        scope = 2; 
-        displayName = "Custom Camo"; 
-        picture = "-"; 
-        model = "\A3\characters_f_beta\INDEP\ia_soldier_01.p3d"; 
-        class ItemInfo : UniformItem { 
-            uniformClass = "Custom_Uniform"; 
-            containerClass = "Supply50"; 
-            mass = 50; 
-        }; 
-    }; 
+    // class Custom_Camo: Uniform_Base 
+    // { 
+    //     scope = 2; 
+    //     displayName = "Custom Camo"; 
+    //     picture = "-"; 
+    //     model = "\A3\characters_f_beta\INDEP\ia_soldier_01.p3d"; 
+    //     class ItemInfo : UniformItem { 
+    //         uniformClass = "Custom_Uniform"; 
+    //         containerClass = "Supply50"; 
+    //         mass = 50; 
+    //     }; 
+    // }; 
 
     //************************************************************************************************************************************************************************************************
     //*****             Vests                *********************************************************************************************************************************************************
     //************************************************************************************************************************************************************************************************
     
-    class VestItem; 
-    class Vest_Camo_Base: ItemCore 
-    { 
-        class ItemInfo; 
-    }; 
+    // class VestItem; 
+    // class Vest_Camo_Base: ItemCore 
+    // { 
+    //     class ItemInfo; 
+    // }; 
      
-    class Custom_Vest1: Vest_Camo_Base 
-    { 
-        scope = 2; 
-        displayName = "Custom Platecarrier"; 
-        picture = "-"; 
-        model = "A3\Characters_F\BLUFOR\equip_b_Vest01"; 
-        hiddenSelections[] = {"Camo"}; 
-        hiddenSelectionsTextures[] = {"arma3-9rifles\Data\uk_plates.paa"}; 
-        class ItemInfo: VestItem 
-        { 
-            uniformModel = "A3\Characters_F\BLUFOR\equip_b_Vest01.p3d"; 
-            containerClass = "Supply120"; 
-            mass = 80; 
-            armor = "5"; 
-            passThrough = 0.3; 
-            hiddenSelections[] = {"camo"}; 
-        }; 
-    };
+    // class Custom_Vest1: Vest_Camo_Base 
+    // { 
+    //     scope = 2; 
+    //     displayName = "Custom Platecarrier"; 
+    //     picture = "-"; 
+    //     model = "A3\Characters_F\BLUFOR\equip_b_Vest01"; 
+    //     hiddenSelections[] = {"Camo"}; 
+    //     hiddenSelectionsTextures[] = {"9Rifles\Data\uk_plates.paa"}; 
+    //     class ItemInfo: VestItem 
+    //     { 
+    //         uniformModel = "A3\Characters_F\BLUFOR\equip_b_Vest01.p3d"; 
+    //         containerClass = "Supply120"; 
+    //         mass = 80; 
+    //         armor = "5"; 
+    //         passThrough = 0.3; 
+    //         hiddenSelections[] = {"camo"}; 
+    //     }; 
+    // };
 
     //************************************************************************************************************************************************************************************************
     //*****            Headgear              *********************************************************************************************************************************************************
     //************************************************************************************************************************************************************************************************
      
-    class H_Beret_blk: ItemCore 
-    { 
-        class ItemInfo; 
-    }; 
-    class Custom_Beret: H_Beret_blk
-    {
-        displayName = "Rainbow Beret";
-        picture = "";
-        model = "\A3\Characters_F\Common\headgear_beret01";
-        hiddenSelections[] = {"Camo"};
-        hiddenSelectionsTextures[] = {"\arma3-9rifles\Data\rainbow_beret.paa"};
-        class ItemInfo: ItemInfo
-        {
-            mass = 1;
-            allowedSlots[] = {901,605};
-            uniformModel = "\A3\Characters_F\Common\headgear_beret01";
-            modelSides[] = {3,1};
-            hiddenSelections[] = {"Camo"};
-            armor = "0.1";
-            passThrough = 0.75;
-        };
-    };
+    // class H_Beret_blk: ItemCore 
+    // { 
+    //     class ItemInfo; 
+    // }; 
+    // class Custom_Beret: H_Beret_blk
+    // {
+    //     displayName = "Rainbow Beret";
+    //     picture = "";
+    //     model = "\A3\Characters_F\Common\headgear_beret01";
+    //     hiddenSelections[] = {"Camo"};
+    //     hiddenSelectionsTextures[] = {"9Rifles\Data\rainbow_beret.paa"};
+    //     class ItemInfo: ItemInfo
+    //     {
+    //         mass = 1;
+    //         allowedSlots[] = {901,605};
+    //         uniformModel = "\A3\Characters_F\Common\headgear_beret01";
+    //         modelSides[] = {3,1};
+    //         hiddenSelections[] = {"Camo"};
+    //         armor = "0.1";
+    //         passThrough = 0.75;
+    //     };
+    // };
     
 }; 
