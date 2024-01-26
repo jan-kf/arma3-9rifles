@@ -5,7 +5,8 @@ class CfgPatches
         units[] = {
             "UK_9Rifles", 
             "Flag_UK_9Rifles_F",
-            "Banner_01_9Rifles_F"
+            "Banner_01_9Rifles_F",
+            "Land_PaperBox_01_small_closed_barrisonprime_F"
         }; 
         requiredAddons[] = {
             "A3_Characters_F", 
@@ -89,6 +90,13 @@ class CfgVehicles
         displayName = "Barrison Prime MH-6 Hummingbird";
         hiddenSelections[] = {"Camo1"};
         hiddenSelectionsTextures[] = {"9Rifles\Data\barrisonprime_heli_mh6.paa"};
+        class TextureSources {
+            class BarrisonPrimeSkin {
+                displayName = "Barrison Prime Skin";
+                author = "YourName";
+                textures[] = {"9Rifles\Data\barrisonprime_heli_mh6.paa"};
+            };
+        };
     };
 
     // **********      FLAGS        ************
@@ -213,6 +221,51 @@ class CfgVehicles
 		hiddenSelectionsTextures[]=
 		{
 			"9Rifles\Data\Flags\flag_9rifles_co.paa"
+		};
+	};
+
+    // **********      SUPPLIES        ************
+
+
+    class Items_base_F;
+	class Land_PaperBox_01_small_closed_base_F: Items_base_F
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		mapSize=0.68000001;
+		_generalMacro="Land_PaperBox_01_small_closed_base_F";
+		scope=0;
+		scopeCurator=0;
+		model="\A3\Props_F_Orange\Humanitarian\Supplies\PaperBox_01_small_closed_F.p3d";
+		DLC="Orange";
+		icon="iconObject_1x1";
+		editorSubcategory="EdSubcat_Humanitarian";
+		hiddenSelections[]=
+		{
+			"Camo"
+		};
+		armor=1;
+		waterLeakiness=0.15000001;
+	};
+    class Land_PaperBox_01_small_closed_barrisonprime_F: Land_PaperBox_01_small_closed_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.207;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_PaperBox_01_small_closed_barrisonprime_F.jpg"; //TODO
+		_generalMacro="Land_PaperBox_01_small_closed_barrisonprime_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Cardboard Box (Barrison Prime)";
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Props_F_Orange\Humanitarian\Supplies\Data\PaperBox_01_small_brown_CO.paa" // TODO
 		};
 	};
 };
