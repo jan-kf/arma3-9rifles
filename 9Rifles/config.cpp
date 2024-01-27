@@ -11,7 +11,8 @@ class CfgPatches
         requiredAddons[] = {
             "A3_Characters_F", 
             "A3_Structures_F_Mil",
-            "A3_Structures_F_Orange_Humanitarian"
+            "A3_Structures_F_Orange_Humanitarian",
+            "A3_Supplies_F_Exp"
         }; 
         requiredVersion = 0.1; 
         weapons[] = {}; 
@@ -151,11 +152,11 @@ class CfgVehicles
 			verticalOffsetWorld=0;
 			init="''";
 		};
-		editorPreview="9Rifles\Data\Flags\Flag_9rifles_F.jpg";
+		editorPreview="9Rifles\Data\Flags\Flag_9rifles_F.jpg"; // Correct use, copy this for future ref
 		_generalMacro="Flag_UK_9Rifles_F";
 		scope=2;
 		scopeCurator=2;
-		displayName = "Flag (UK 9 Rifles)";
+		displayName = "Flag (9 Rifles)";
 		class EventHandlers
 		{
 			init="(_this select 0) setFlagTexture '9Rifles\Data\Flags\flag_9rifles_co.paa'";
@@ -217,7 +218,7 @@ class CfgVehicles
 		_generalMacro="Banner_01_9Rifles_F";
 		scope=2;
 		scopeCurator=2;
-		displayName="Banner (UK 9 Rifles)";
+		displayName="Banner (9 Rifles)";
 		hiddenSelectionsTextures[]=
 		{
 			"9Rifles\Data\Flags\flag_9rifles_co.paa"
@@ -258,16 +259,127 @@ class CfgVehicles
 			verticalOffsetWorld=0;
 			init="''";
 		};
-		editorPreview="\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_PaperBox_01_small_closed_barrisonprime_F.jpg"; //TODO
+		// editorPreview="\A3\EditorPreviews_F_Orange\Data\CfgVehicles\Land_PaperBox_01_small_closed_barrisonprime_F.jpg"; //TODO
 		_generalMacro="Land_PaperBox_01_small_closed_barrisonprime_F";
 		scope=2;
 		scopeCurator=2;
 		displayName="Cardboard Box (Barrison Prime)";
 		hiddenSelectionsTextures[]=
 		{
-			"\A3\Props_F_Orange\Humanitarian\Supplies\Data\PaperBox_01_small_brown_CO.paa" // TODO
+			"9Rifles\Data\Supplies\barrisonPrime_box.paa" 
 		};
 	};
+
+    class ReammoBox_F;
+    class Box_9Rifles_Medical_F: ReammoBox_F
+	{
+		author="Yoshi";
+		mapSize=1.25;
+		class SimpleObject
+		{
+			eden=1;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.382;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		editorPreview="\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_NATO_Uniforms_F.jpg"; //TODO
+		_generalMacro="Box_9Rifles_Medical_F"; 
+		scope=2;
+		displayName="Medical Box (9 Rifles)"; 
+		model="\A3\Supplies_F_Exp\Ammoboxes\Uniforms_Box_F.p3d";
+		icon="\A3\Supplies_F_Exp\Ammoboxes\Data\UI\icon_equipment_box_ca.paa"; //TODO I think this is the icon on the item once it's placed?
+		DLC="Expansion";
+		editorCategory="EdCat_Supplies";
+		maximumLoad=7000;
+		hiddenSelections[]=
+		{
+			"camo",
+			"camo_signs"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Supplies_F_Exp\Ammoboxes\Data\uniforms_box_blufor_co.paa", // Texture
+			"9Rifles\Data\Supplies\medical_text.paa" // Text
+		};
+		class DestructionEffects
+		{
+			class HouseDestr
+			{
+				simulation="destroy";
+				type="DelayedDestructionAmmoBox";
+				position="";
+				intensity=1;
+				interval=1;
+				lifeTime=6;
+			};
+		};
+		class TransportMagazines
+		{
+		};
+		class TransportWeapons
+		{
+		};
+		class TransportItems
+		{
+		};
+	};
+    class Box_9Rifles_Ammo_F: Box_9Rifles_Medical_F
+    {
+        editorPreview="\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_NATO_Uniforms_F.jpg"; //TODO
+		_generalMacro="Box_9Rifles_Ammo_F"; 
+		displayName="Ammo Box (9 Rifles)"; 
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Supplies_F_Exp\Ammoboxes\Data\uniforms_box_blufor_co.paa", // Texture
+			"9Rifles\Data\Supplies\ammo_text.paa" // Text
+		};
+    };
+    class Box_9Rifles_Trash_F: Box_9Rifles_Medical_F
+    {
+        editorPreview="\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_NATO_Uniforms_F.jpg"; //TODO
+		_generalMacro="Box_9Rifles_Trash_F"; 
+		displayName="Trash/Rubbish Box (9 Rifles)"; 
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Supplies_F_Exp\Ammoboxes\Data\uniforms_box_blufor_co.paa", // Texture
+			"9Rifles\Data\Supplies\trash_text.paa" // Text
+		};
+    };
+    class Box_9Rifles_Supplies_F: Box_9Rifles_Medical_F
+    {
+        editorPreview="\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_NATO_Uniforms_F.jpg"; //TODO
+		_generalMacro="Box_9Rifles_Supplies_F"; 
+		displayName="Supplies Box (9 Rifles)"; 
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Supplies_F_Exp\Ammoboxes\Data\uniforms_box_blufor_co.paa", // Texture
+			"9Rifles\Data\Supplies\supplies_text.paa" // Text
+		};
+    };
+    class Box_9Rifles_Food_F: Box_9Rifles_Medical_F
+    {
+        editorPreview="\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_NATO_Uniforms_F.jpg"; //TODO
+		_generalMacro="Box_9Rifles_Food_F"; 
+		displayName="Food/Drink Box (9 Rifles)"; 
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Supplies_F_Exp\Ammoboxes\Data\uniforms_box_blufor_co.paa", // Texture
+			"9Rifles\Data\Supplies\food_text.paa" // Text
+		};
+    };
+    class Box_9Rifles_Equipment_F: Box_9Rifles_Medical_F
+    {
+        editorPreview="\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_NATO_Uniforms_F.jpg"; //TODO
+		_generalMacro="Box_9Rifles_Equipment_F"; 
+		displayName="Equipment Box (9 Rifles)"; 
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Supplies_F_Exp\Ammoboxes\Data\uniforms_box_blufor_co.paa", // Texture
+			"9Rifles\Data\Supplies\equipment_text.paa" // Text
+		};
+    };
 };
 
 class cfgWeapons 
