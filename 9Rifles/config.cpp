@@ -50,6 +50,27 @@ class UniformSlotInfo
     linkProxy = "-"; 
 }; 
 
+class CfgUnitInsignia {
+    class UK_9Rifles_Patch {
+        displayName = "9 Rifles"; 
+        author = "Yoshi";
+        texture = "9Rifles\Data\Patches\uk9riflesPatch.paa"; 
+        textureVehicle = ""; // Leave empty
+    };
+	class UK_4Commando_big4_Patch {
+        displayName = "4 Commando [Big 4]"; 
+        author = "Yoshi";
+        texture = "9Rifles\Data\Patches\uk4commandoBig4Patch.paa"; 
+        textureVehicle = ""; // Leave empty
+    };
+	class UK_4Commando_fullName_Patch {
+        displayName = "4 Commando [name]"; 
+        author = "Yoshi";
+        texture = "9Rifles\Data\Patches\uk4commandoNamePatch.paa"; 
+        textureVehicle = ""; // Leave empty
+    };
+};
+
 class CfgVehicles 
 {     
     //************************************************************************************************************************************************************************************************
@@ -224,6 +245,50 @@ class CfgVehicles
 			"9Rifles\Data\Flags\flag_9rifles_co.paa"
 		};
 	};
+	class Banner_01_9Rifles_Falcon_F: Banner_01_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.46900001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		// editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
+		_generalMacro="Banner_01_9Rifles_Falcon_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Camp Falcon Banner (9 Rifles)";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Flags\banner_falcon.paa"
+		};
+	};
+	class Banner_01_9Rifles_Copper_F: Banner_01_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.46900001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		// editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
+		_generalMacro="Banner_01_9Rifles_Copper_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Camp Copper Banner (9 Rifles)";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Flags\banner_copper.paa"
+		};
+	};
 
     // **********      SUPPLIES        ************
 
@@ -293,6 +358,16 @@ class CfgVehicles
 		DLC="Expansion";
 		editorCategory="EdCat_Supplies";
 		maximumLoad=7000;
+
+		ace_cargo_size = 2;  // Adjust the size as needed
+		ace_cargo_canLoad = 1;  // 1 to allow loading into vehicles, 0 to disallow
+		ace_dragging_canDrag = 1;  // 1 to enable dragging, 0 to disable
+		ace_dragging_canCarry = 1;  // 1 to enable carrying, 0 to disable
+		ace_dragging_dragPosition[] = {0, 1.2, 0};  // Adjust the position as needed
+		ace_dragging_dragDirection = 0;  // Adjust the direction as needed
+		ace_dragging_ignoreWeightCarry = 1;
+		ace_dragging_ignoreWeight = 1;
+
 		hiddenSelections[]=
 		{
 			"camo",
@@ -329,7 +404,7 @@ class CfgVehicles
     {
         editorPreview="\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_NATO_Uniforms_F.jpg"; //TODO
 		_generalMacro="Box_9Rifles_Ammo_F"; 
-		displayName="Ammo Box (9 Rifles)"; 
+		displayName="Ammo/Ammunition Box (9 Rifles)"; 
 		hiddenSelectionsTextures[]=
 		{
 			"\A3\Supplies_F_Exp\Ammoboxes\Data\uniforms_box_blufor_co.paa", // Texture
@@ -340,7 +415,7 @@ class CfgVehicles
     {
         editorPreview="\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_NATO_Uniforms_F.jpg"; //TODO
 		_generalMacro="Box_9Rifles_Trash_F"; 
-		displayName="Trash/Rubbish Box (9 Rifles)"; 
+		displayName="Trash/Rubbish/Disposable Box (9 Rifles)"; 
 		hiddenSelectionsTextures[]=
 		{
 			"\A3\Supplies_F_Exp\Ammoboxes\Data\uniforms_box_blufor_co.paa", // Texture
@@ -362,7 +437,7 @@ class CfgVehicles
     {
         editorPreview="\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_NATO_Uniforms_F.jpg"; //TODO
 		_generalMacro="Box_9Rifles_Food_F"; 
-		displayName="Food/Drink Box (9 Rifles)"; 
+		displayName="Rations Food/Drink Box (9 Rifles)"; 
 		hiddenSelectionsTextures[]=
 		{
 			"\A3\Supplies_F_Exp\Ammoboxes\Data\uniforms_box_blufor_co.paa", // Texture
