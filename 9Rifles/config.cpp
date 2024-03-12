@@ -289,6 +289,28 @@ class CfgVehicles
 			"9Rifles\Data\Flags\banner_copper.paa"
 		};
 	};
+	class Banner_01_9Rifles_Campbeltown_F: Banner_01_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.46900001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		// editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
+		_generalMacro="Banner_01_9Rifles_Campbeltown_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Campbeltown Barracks Banner (9 Rifles)";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Flags\banner_campbeltown.paa"
+		};
+	};
 
     // **********      SUPPLIES        ************
 
