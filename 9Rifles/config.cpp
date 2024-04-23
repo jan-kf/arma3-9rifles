@@ -110,16 +110,41 @@ class CfgVehicles
         crew = "B_Helipilot_F";
         faction = "UK_9Rifles";
         displayName = "Barrison Prime MH-6 Hummingbird";
+		textureList[]=
+		{
+			"Barrison Prime",
+			1
+		};
         hiddenSelections[] = {"Camo1"};
         hiddenSelectionsTextures[] = {"9Rifles\Data\barrisonprime_heli_mh6.paa"};
-        class TextureSources {
-            class BarrisonPrimeSkin {
-                displayName = "Barrison Prime Skin";
-                author = "YourName";
-                textures[] = {"9Rifles\Data\barrisonprime_heli_mh6.paa"};
-            };
-        };
+		_generalMacro="BarrisonPrime_MH6";
     };
+
+	// class UK3CB_BAF_LandRover_Amb_Green_A;
+	// class BarrisonPrime_MH6_UK3CB_BAF_LandRover_Amb_Green_A: UK3CB_BAF_LandRover_Amb_Green_A
+	// {
+	// 	author="www.3commandobrigade.com";
+	// 	displayname="Barry's Land Rover Ambulance (Green)";
+	// 	scope=2;
+	// 	side=1;
+	// 	faction="BLU_F";
+	// 	editorPreview="\UK3CB_BAF_Vehicles\addons\UK3CB_BAF_Vehicles_LandRover\data\ui\UK3CB_BAF_LandRover_Amb_Green_A.jpg";
+	// 	crew="B_Soldier_F";
+	// 	typicalCargo[]=
+	// 	{
+	// 		"B_Soldier_F"
+	// 	};
+	// 	hiddenSelectionsTextures[]=
+	// 	{
+	// 		"",
+	// 		"",
+	// 		"\uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_landrover\data\lr_base_baf_green_co.paa",
+	// 		"\uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_landrover\data\lr_hardtop_baf_green_co.paa",
+	// 		"\uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_landrover\data\lr_special_baf_green_co.paa",
+	// 		"9Rifles\Data\amb.paa",
+	// 		"\uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_landrover\data\flag_unionJack.paa"
+	// 	};
+	// };
 
     // **********      FLAGS        ************
 
@@ -311,6 +336,270 @@ class CfgVehicles
 			"9Rifles\Data\Flags\banner_campbeltown.paa"
 		};
 	};
+	class Banner_01_9Rifles_Team_1_1_F: Banner_01_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.46900001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		// editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
+		_generalMacro="Banner_01_9Rifles_Team_1_1_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Team 1-1 Banner (9 Rifles)";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Flags\team_1-1.paa"
+		};
+	};
+	class Banner_01_9Rifles_Team_1_2_F: Banner_01_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.46900001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		// editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
+		_generalMacro="Banner_01_9Rifles_Team_1_2_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Team 1-2 Banner (9 Rifles)";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Flags\team_1-2.paa"
+		};
+	};
+	class Banner_01_9Rifles_Team_1_3_F: Banner_01_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.46900001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		// editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
+		_generalMacro="Banner_01_9Rifles_Team_1_3_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Team 1-3 Banner (9 Rifles)";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Flags\team_1-3.paa"
+		};
+	};
+	class Banner_01_9Rifles_Team_2_1_F: Banner_01_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.46900001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		// editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
+		_generalMacro="Banner_01_9Rifles_Team_2_1_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Team 2-1 Banner (9 Rifles)";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Flags\team_2-1.paa"
+		};
+	};
+	class Banner_01_9Rifles_Team_2_2_F: Banner_01_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.46900001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		// editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
+		_generalMacro="Banner_01_9Rifles_Team_2_2_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Team 2-2 Banner (9 Rifles)";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Flags\team_2-2.paa"
+		};
+	};
+	class Banner_01_9Rifles_Team_2_3_F: Banner_01_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.46900001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		// editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
+		_generalMacro="Banner_01_9Rifles_Team_2_3_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Team 2-3 Banner (9 Rifles)";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Flags\team_2-3.paa"
+		};
+	};
+	class Banner_01_9Rifles_Team_Logistics_F: Banner_01_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.46900001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		// editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
+		_generalMacro="Banner_01_9Rifles_Team_Logistics_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Team Logistics Banner (9 Rifles)";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Flags\team_logistics.paa"
+		};
+	};
+	class Banner_01_9Rifles_Team_FireSupport_F: Banner_01_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.46900001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		// editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
+		_generalMacro="Banner_01_9Rifles_Team_FireSupport_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Team Fire Support Banner (9 Rifles)";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Flags\team_fireSupport.paa"
+		};
+	};
+	class Banner_01_9Rifles_Team_AssaultPioneers_F: Banner_01_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.46900001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		// editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
+		_generalMacro="Banner_01_9Rifles_Team_AssaultPioneers_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Team Assault Pioneers Banner (9 Rifles)";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Flags\team_assaultPioneers.paa"
+		};
+	};
+	class Banner_01_9Rifles_Team_AAC_F: Banner_01_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.46900001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		// editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
+		_generalMacro="Banner_01_9Rifles_Team_AAC_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Team AAC Banner (9 Rifles)";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Flags\team_AAC.paa"
+		};
+	};
+	class Banner_01_9Rifles_Team_PltCommand_F: Banner_01_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.46900001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		// editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
+		_generalMacro="Banner_01_9Rifles_Team_PltCommand_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Team Plt Command Banner (9 Rifles)";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Flags\team_pltCommand.paa"
+		};
+	};
+	class Banner_01_9Rifles_Team_CompanyHQ_F: Banner_01_base_F
+	{
+		author="Yoshi";
+		class SimpleObject
+		{
+			eden=0;
+			animate[]={};
+			hide[]={};
+			verticalOffset=0.46900001;
+			verticalOffsetWorld=0;
+			init="''";
+		};
+		// editorPreview="9Rifles\Data\Flags\Banner_01_9Rifles_F.jpg"; 
+		_generalMacro="Banner_01_9Rifles_Team_CompanyHQ_F";
+		scope=2;
+		scopeCurator=2;
+		displayName="Team Company HQ Banner (9 Rifles)";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Flags\team_companyHQ.paa"
+		};
+	};
 
     // **********      SUPPLIES        ************
 
@@ -477,6 +766,50 @@ class CfgVehicles
 			"9Rifles\Data\Supplies\equipment_text.paa" // Text
 		};
     };
+	class Box_9Rifles_AmmoMag_F: Box_9Rifles_Medical_F
+    {
+        editorPreview="\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_NATO_Uniforms_F.jpg"; //TODO
+		_generalMacro="Box_9Rifles_AmmoMag_F"; 
+		displayName="Magazines Ammo/Ammunition Box (9 Rifles)"; 
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Supplies_F_Exp\Ammoboxes\Data\uniforms_box_blufor_co.paa", // Texture
+			"9Rifles\Data\Supplies\ammo_magazines.paa" // Text
+		};
+    };
+	class Box_9Rifles_AmmoBeltShells_F: Box_9Rifles_Medical_F
+    {
+        editorPreview="\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_NATO_Uniforms_F.jpg"; //TODO
+		_generalMacro="Box_9Rifles_AmmoBeltShell_F"; 
+		displayName="Belts & Shells Ammo/Ammunition Box (9 Rifles)"; 
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Supplies_F_Exp\Ammoboxes\Data\uniforms_box_blufor_co.paa", // Texture
+			"9Rifles\Data\Supplies\ammo_beltsShells.paa" // Text
+		};
+    };
+	class Box_9Rifles_AmmoSupport_F: Box_9Rifles_Medical_F
+    {
+        editorPreview="\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_NATO_Uniforms_F.jpg"; //TODO
+		_generalMacro="Box_9Rifles_AmmoSupport_F"; 
+		displayName="Support Ammo/Ammunition Box (9 Rifles)"; 
+		hiddenSelectionsTextures[]=
+		{
+			"\A3\Supplies_F_Exp\Ammoboxes\Data\uniforms_box_blufor_co.paa", // Texture
+			"9Rifles\Data\Supplies\ammo_support.paa" // Text
+		};
+    };
+	// class Box_9Rifles_DEBUG_F: Box_9Rifles_Medical_F
+    // {
+    //     editorPreview="\A3\EditorPreviews_F_Exp\Data\CfgVehicles\Box_NATO_Uniforms_F.jpg"; //TODO
+	// 	_generalMacro="Box_9Rifles_DEBUG_F"; 
+	// 	displayName="DEBUG Box (9 Rifles)"; 
+	// 	hiddenSelectionsTextures[]=
+	// 	{
+	// 		"\A3\Supplies_F_Exp\Ammoboxes\Data\uniforms_box_blufor_co.paa", // Texture
+	// 		"9Rifles\Data\Supplies\textTest.paa" // Text
+	// 	};
+    // };
 };
 
 class cfgWeapons 
