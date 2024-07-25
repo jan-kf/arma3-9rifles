@@ -6,13 +6,20 @@ class CfgPatches
             "UK_9Rifles", 
             "Flag_UK_9Rifles_F",
             "Banner_01_9Rifles_F",
-            "Land_PaperBox_01_small_closed_barrisonprime_F"
+            "Land_PaperBox_01_small_closed_barrisonprime_F",
+			"SetOneOneCharlieModule", 
+			"SetOneOneDeltaModule", 
+			"SetOneTwoCharlieModule", 
+			"SetOneTwoDeltaModule", 
+			"SetFireSupportModule", 
+			"SetLogiRidgebackModule"
         }; 
         requiredAddons[] = {
             "A3_Characters_F", 
             "A3_Structures_F_Mil",
             "A3_Structures_F_Orange_Humanitarian",
-            "A3_Supplies_F_Exp"
+            "A3_Supplies_F_Exp",
+			"A3_Modules_F"
         }; 
         requiredVersion = 0.1; 
         weapons[] = {}; 
@@ -30,7 +37,15 @@ class cfgFactionClasses
         priority = 3; // Position in list. 
         side = 1; // Opfor = 0, Blufor = 1, Indep = 2. 
         icon = ""; //Custom Icon 
-    };  
+    };
+    class NO_CATEGORY;
+	class UK_9RiflesZeus: NO_CATEGORY
+    { 
+        displayName = "9 Rifles"; 
+        priority = 2;
+        side = 7; 
+    };
+  
 };
 
 // class CfgUnitInsignia
@@ -71,8 +86,72 @@ class CfgUnitInsignia {
     };
 };
 
+class CfgFunctions {
+    class UK_9Rifles {
+        class Modules {
+            file = "\9Rifles\Functions";
+            class setOneOneCharlie {
+                description = "Function to set 1-1C's vic skin";
+            };
+			class setOneOneDelta {
+                description = "Function to set 1-1D's vic skin";
+            };
+			class setOneTwoCharlie {
+                description = "Function to set 1-2C's vic skin";
+            };
+			class setOneTwoDelta {
+                description = "Function to set 1-2D's vic skin";
+            };
+			class setFireSupport {
+                description = "Function to set FS's vic skin";
+            };
+			class setLogiRidgeback {
+                description = "Function to set L's Ridgeback vic skin";
+            };
+        };
+    };
+};
+
 class CfgVehicles 
-{     
+{   
+    class Module_F;
+	class UK_9Rifles_moduleBase: Module_F
+	{
+		author="Yoshi";
+		category="UK_9RiflesZeus";
+		function="";
+		scope=1;
+		scopeCurator=2;
+		curatorCanAttach=1;
+	};
+    class SetOneOneCharlieModule: UK_9Rifles_moduleBase {
+        displayName = "Set 1-1 Charlie Vic";
+        function = "UK_9Rifles_fnc_setOneOneCharlie";
+    };
+    class SetOneOneDeltaModule: UK_9Rifles_moduleBase {
+        displayName = "Set 1-1 Delta Vic";
+        function = "UK_9Rifles_fnc_setOneOneDelta";
+    };
+    class SetOneTwoCharlieModule: UK_9Rifles_moduleBase {
+        displayName = "Set 1-2 Charlie Vic";
+        function = "UK_9Rifles_fnc_setOneTwoCharlie";
+    };
+    class SetOneTwoDeltaModule: UK_9Rifles_moduleBase {
+        displayName = "Set 1-2 Delta Vic";
+        function = "UK_9Rifles_fnc_setOneTwoDelta";
+    };
+    class SetFireSupportModule: UK_9Rifles_moduleBase {
+        displayName = "Set Fire Support Vic";
+        function = "UK_9Rifles_fnc_setFireSupport";
+    };
+    class SetLogiRidgebackModule: UK_9Rifles_moduleBase {
+        displayName = "Set Logi Ridgeback Vic";
+        function = "UK_9Rifles_fnc_setLogiRidgeback";
+    };  
+	//this setObjectTexture [9, "9Rifles\Data\Vehicles\man_con_9_jeff_desert_dark.paa"];
+	// this setObjectTexture [4, ""];
+	// this setObjectTexture [5, ""];
+
     //************************************************************************************************************************************************************************************************
     //*****             Units                *********************************************************************************************************************************************************
     //************************************************************************************************************************************************************************************************
