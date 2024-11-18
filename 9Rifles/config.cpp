@@ -12,7 +12,9 @@ class CfgPatches
 			"SetOneTwoCharlieModule", 
 			"SetOneTwoDeltaModule", 
 			"SetFireSupportModule", 
-			"SetLogiRidgebackModule"
+			"SetLogiRidgebackModule",
+			"B_UGV_9RIFLES_F",
+			"BarrisonPrime_MH6",
         }; 
         requiredAddons[] = {
             "A3_Characters_F", 
@@ -186,6 +188,7 @@ class CfgVehicles
     {
         side = 1;
         scope = 2;
+		scopeCurator = 2;
         crew = "B_Helipilot_F";
         faction = "UK_9Rifles";
         displayName = "Barrison Prime MH-6 Hummingbird";
@@ -224,6 +227,28 @@ class CfgVehicles
 	// 		"\uk3cb_baf_vehicles\addons\uk3cb_baf_vehicles_landrover\data\flag_unionJack.paa"
 	// 	};
 	// };
+	class B_UGV_01_F;
+	class B_UGV_9RIFLES_F: B_UGV_01_F
+	{
+		author="Yoshi";
+		editorPreview="\A3\EditorPreviews_F\Data\CfgVehicles\B_UGV_01_F.jpg";
+		displayName = "Stompy!";
+		_generalMacro="B_UGV_9RIFLES_F";
+		faction = "UK_9Rifles";
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Vehicles\stompy_ext.paa",
+			"9Rifles\Data\Vehicles\stompy_int.paa",
+			"\A3\Data_F\Vehicles\Turret_co.paa"
+		};
+		textureList[]=
+		{
+			"Stompy",
+			1
+		};
+		scope = 2;
+		scopeCurator = 2;
+	};
 
     // **********      FLAGS        ************
 
