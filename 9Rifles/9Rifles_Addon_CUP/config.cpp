@@ -10,7 +10,7 @@ class CfgPatches
         }; 
         requiredAddons[] = {
 			"CUP_WheeledVehicles_Ridgeback",
-            "UK_9Rifles_Core"
+            "UK_9Rifles"
         }; 
         requiredVersion = 0.1; 
         weapons[] = {}; 
@@ -25,7 +25,7 @@ class CfgVehicles {
 		scope=1;
 		scopeCurator=1;
 		side=1;
-		faction="UK_9Rifles";
+		faction="UK_9Rifles_F";
 		hiddenSelectionsMaterials[]=
 		{
 			"\cup\wheeledvehicles\cup_wheeledvehicles_ridgeback\data\tex1.rvmat",
