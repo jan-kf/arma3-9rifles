@@ -119,8 +119,8 @@ class CfgVehicles {
 			"\uk3cb_baf_vehicles\addons\UK3CB_BAF_Vehicles_Warrior_a3\data\cage_baf_co.paa"
 		};
 	};
-	class UK3CB_BAF_Wildcat_AH1_CAS_6D;
-	class UK9Rifles_F1_Wildcat: UK3CB_BAF_Wildcat_AH1_CAS_6D
+	class UK3CB_BAF_Wildcat_AH1_8_Armed_MTP;
+	class UK9Rifles_F1_Wildcat: UK3CB_BAF_Wildcat_AH1_8_Armed_MTP
 	{
 		scope=2;
 		scopeCurator=2;
