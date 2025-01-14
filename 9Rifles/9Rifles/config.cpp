@@ -8,6 +8,7 @@ class CfgPatches
             "Banner_01_9Rifles_F",
             "Land_PaperBox_01_small_closed_barrisonprime_F",
 			"B_UGV_9RIFLES_F",
+			"B_MBT_04_9RIFLES_ROCI_F",
 			"BarrisonPrime_MH6",
         }; 
         requiredAddons[] = {
@@ -154,6 +155,28 @@ class CfgVehicles
 		scope = 2;
 		scopeCurator = 2;
 	};
+	class O_MBT_04_command_F;
+	class B_MBT_04_9RIFLES_ROCI_F: O_MBT_04_command_F
+	{
+		author="Yoshi";
+		displayName = "Rocinante";
+		_generalMacro="B_MBT_04_9RIFLES_ROCI_F";
+		faction = "UK_9Rifles_F";
+		side = 1;
+		hiddenSelectionsTextures[]=
+		{
+			"9Rifles\Data\Vehicles\roci1.paa",
+			"9Rifles\Data\Vehicles\roci2.paa"
+		};
+		textureList[]=
+		{
+			"Rocinante",
+			1
+		};
+		scope = 2;
+		scopeCurator = 2;
+	};
+
 
     // **********      FLAGS        ************
 
